@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-1">
+                    <div>
+                        <div class="stats shadow">
+                            <div class="stat">
+                                <div id="available-balance" class="stat-value">8940</div>
+                                <div class="stat-desc">Available Balance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Button grid -->
+                    <div class="mt-5 grid grid-cols-3 gap-4 mx-3">
+                        <button id="btn-add-money" class="btn btn-lg text-sm">Add Money</button>
+                        <button id="cashout-btn" class="btn btn-lg text-sm">Cash Out</button>
+                        <button id="transfer-btn" class="btn btn-lg text-sm">Transfer Money</button>
+                        <button id="transaction-btn" class="btn btn-lg text-sm ">Transaction</button>
+
+                    </div>
+                    <!-- button grid end -->
+                    <!-- add money form start -->
+                    <div id="add-money-form" class="card bg-base-100 max-w-sm shrink-0 shadow-2xl mt-3 hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="amount-input" type="number" placeholder="Enter your Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="pin-input" type="password" placeholder="Enter Pin"
+                                    class="input input-bordered" required autocomplete="off" />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="money-added-primarybtn" class="btn btn-primary">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- add money form end -->
+                    <!-- cash out form start -->
+                    <div id="cashout-form" class="card bg-base-100 max-w-sm shrink-0 shadow-2xl mt-3">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="cahsout-amount-input" type="number" placeholder="Cash Out Amount"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin</span>
+                                </label>
+                                <input id="cashout-pin-input" type="password" placeholder="Enter Pin"
+                                    class="input input-bordered" required autocomplete="off" />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cashout-primarybtn" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out form end -->
+
+                    <!-- transfer money form start -->
+                    <div id="transfer-money-form"
+                        class="card bg-base-100 max-w-sm shrink-0 shadow-2xl mt-3 mb-3 hidden">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text font-bold">Transfer Money</span>
+                                </label>
+                                <label class="label">
+                                    <span class="label-text">User Account Number</span>
+                                </label>
+                                <input id="ac-num" type="number" placeholder="Enter 11 digit number"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="transfer-amount" type="number" placeholder="Enter amount to transfer"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="transfer-pin" type="password" placeholder="Enter 4 digit pin number"
+                                    class="input input-bordered" required autocomplete="off" />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="transfer-now-btn" class="btn btn-primary">Transfer Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- transfer money form start -->
+                    <!-- transaction section start -->
+                    <section id="transaction-section" class="hidden space-y-3">
+                        <h3 class="font-bold text-xl">Transaction History</h3>
+                    </section>
+
+                    <!-- transaction section end -->
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/home.js"></script>
+    <script src="js/utilities.js"></script>
+</body>
+
+</html>
